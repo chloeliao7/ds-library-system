@@ -2,12 +2,14 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Welcome, Let's Go To Library!</title>
 </head>
 <body>
-<h1>Hello, welcome to the Library Center!</h1>
-<ul>
-    <li th:each="map : ${booksMap}"><a th:href="@{'/catalog/'+${map.value}}" th:text="${map.key}"></a></li>
+<h1>Welcome, Let's Go To Library!</h1>
+<h2>popular books:</h2>
+<ul> 
+	<li th:each="map : ${booksMap}"><a th:href="@{'/catalog/'+${map.value}}" th:text="${map.key}"></a></li>
 </ul>
+<h3>Find a book: <input type = "text"><input type = "submit" value = "search"></h3>
 </body>
 </html>
